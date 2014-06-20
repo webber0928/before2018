@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[I'm Webber]]></title>
+  <subtitle><![CDATA[白色的明天在等著我們]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://cc.woodstock.ml/"/>
+  <updated>2014-06-20T11:11:04.593Z</updated>
+  <id>http://cc.woodstock.ml/</id>
+  
+  <author>
+    <name><![CDATA[Webber Doe]]></name>
+    <email><![CDATA[bird23074035@gmail.com]]></email>
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Hello Hexo]]></title>
+    <link href="http://cc.woodstock.ml/2014/06/18/Hello-Hexo/"/>
+    <id>http://cc.woodstock.ml/2014/06/18/Hello-Hexo/</id>
+    <published>2014-06-18T15:24:26.000Z</published>
+    <updated>2014-06-20T02:52:58.000Z</updated>
+    <content type="html"><![CDATA[<p>這是我的第一個blog, 對於為什麼選擇<a href="http://hexo.io" target="_blank" rel="external">hexo</a>做我的blog呢？<br>因為這可是nodejs + markdown 所組成的blog！！<br>是不是很潮呀~!<br>廢話不多說趕快看如何啟動吧<br><a id="more"></a></p>
+<h2 id="快速啟動">快速啟動</h2>
+<p>首先安裝 nvm + nodejs (ubuntu) :</p>
+<h3 id="nvm">nvm</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ curl https://raw.github.com/creationix/nvm/v0.<span class="number">4.0</span>/install.sh | sh
+</pre></td></tr></table></figure>
+
+<p>新增以下命令列到 <code>.bashrc</code> 的最後:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="comment"># set PATH so it includes user's private bin if it exists</span>
+<span class="keyword">if</span> [ <span class="operator">-d</span> <span class="string">"<span class="variable">$HOME</span>/.nvm/bin"</span> ] ; <span class="keyword">then</span>
+  <span class="keyword">export</span> PATH=<span class="string">"<span class="variable">$HOME</span>/.nvm/bin:<span class="variable">$PATH</span>"</span>
+  <span class="keyword">export</span> NVM_DIR=<span class="string">"<span class="variable">$HOME</span>/.nvm"</span>
+<span class="keyword">fi</span>
+[ <span class="operator">-s</span> <span class="string">"<span class="variable">$HOME</span>/.nvm/nvm.sh"</span> ] && . <span class="string">"<span class="variable">$HOME</span>/.nvm/nvm.sh"</span>
+</pre></td></tr></table></figure>
+
+<h3 id="nodejs">nodejs</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ nvm install v0.<span class="number">10.26</span>
+</pre></td></tr></table></figure>
+
+<p>接著安裝hexo:</p>
+<h3 id="hexo">hexo</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ npm install -g hexo
+</pre></td></tr></table></figure>
+
+<p>接著只需要幾個簡單的命令, 你就可以打理好一切</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre>$ hexo init      <span class="comment">#初始化</span>
+$ hexo n <span class="string">'title'</span> <span class="comment">#寫名為'title'的文章</span>
+$ hexo g         <span class="comment">#生成</span>
+$ hexo s         <span class="comment">#啟動, 預設為port:4000</span>
+</pre></td></tr></table></figure><br>真的超簡單的吧！</p>
+]]></content>
+    <summary type="html"><![CDATA[<p>這是我的第一個blog, 對於為什麼選擇<a href="http://hexo.io" target="_blank" rel="external">hexo</a>做我的blog呢？<br>因為這可是nodejs + markdown 所組成的blog！！<br>是不是很潮呀~!<br>廢話不多說趕快看如何啟動吧<br>]]></summary>
+    
+      <category term="hexo" scheme="http://cc.woodstock.ml/tags/hexo/"/>
+    
+      <category term="nodejs" scheme="http://cc.woodstock.ml/tags/nodejs/"/>
+    
+      <category term="blog" scheme="http://cc.woodstock.ml/tags/blog/"/>
+    
+      <category term="md" scheme="http://cc.woodstock.ml/tags/md/"/>
+    
+      <category term="markdown" scheme="http://cc.woodstock.ml/tags/markdown/"/>
+    
+      <category term="hexo" scheme="http://cc.woodstock.ml/categories/hexo/"/>
+    
+  </entry>
+  
+</feed>
