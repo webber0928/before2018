@@ -4,7 +4,7 @@
   <subtitle><![CDATA[白色的明天在等著我們]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://cc.woodstock.ml/"/>
-  <updated>2014-06-20T11:11:04.593Z</updated>
+  <updated>2014-06-23T01:31:15.897Z</updated>
   <id>http://cc.woodstock.ml/</id>
   
   <author>
@@ -13,6 +13,115 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Hexo + Disqus (如何使用Disqus的評論框)]]></title>
+    <link href="http://cc.woodstock.ml/2014/06/23/Hexo-+-Disqus/"/>
+    <id>http://cc.woodstock.ml/2014/06/23/Hexo-+-Disqus/</id>
+    <published>2014-06-23T00:27:40.000Z</published>
+    <updated>2014-06-23T01:31:03.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="首先到Disqus去註冊帳號">首先到<a href="https://disqus.com/" target="_blank" rel="external">Disqus</a>去註冊帳號</h2>
+<p><img src="/css/images/blog/disqus1.png" alt="點選右上登入"><br><a id="more"></a><br><img src="/css/images/blog/disqus2.png" alt="可以直接用google 或 facebook榜定"><br><img src="/css/images/blog/disqus3.png" alt="登入後點選右下方 *Add Disqus to your site*"><br><img src="/css/images/blog/disqus4.png" alt="設定 網站網址, disqus網址, 類別"></p>
+<pre><code><span class="string">"Choose your unique Disqus URL"</span> 的 <span class="string">"ccwoodstock"</span> 就是你的短網址
+</code></pre><p><img src="/css/images/blog/disqus5.png" alt="請選擇 Universal Code"><br><img src="/css/images/blog/disqus6.png" alt="照著頁面步驟嵌入hexo頁面即可"></p>
+<h2 id="設定Hexo">設定Hexo</h2>
+<ul>
+<li><p>到本機下，修改本機目錄下的 _confid.yml 在 disqus_shortname 貼上自己的 shortname</p>
+  <figure class="highlight sh"><figcaption><span>_confid.yml</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="preprocessor"># Disqus</span>
+disqus_shortname: ccwoodstock
+</pre></td></tr></table></figure>
+</li>
+<li><p>主題可能沒有 comment.ejs，請在目錄下增加代碼</p>
+  <figure class="highlight js"><figcaption><span>themes/xxxx/layout/_partial/comment.ejs</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre>	&lt;% <span class="keyword">if</span> (page.comments){ %&gt;
+	<span class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comment"</span>&gt;</span>
+	  <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">class</span>=<span class="value">"title"</span>&gt;</span><span class="vbscript">&lt;%= __(<span class="comment">'comment') %&gt;</span></span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+
+	  <span class="vbscript">&lt;% <span class="keyword">if</span> (theme.comment_provider == <span class="string">"facebook"</span>) {
+	      <span class="keyword">if</span> (theme.facebook) { %&gt;</span>
+	      <span class="vbscript">&lt;%- partial(<span class="comment">'_partial/facebook_comment', {fbConfig: theme.facebook}) %&gt;</span></span>
+	      <span class="vbscript">&lt;% } %&gt;</span>
+	  <span class="vbscript">&lt;% } <span class="keyword">else</span> <span class="keyword">if</span>(config.disqus_shortname) { %&gt;</span>
+	  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"disqus_thread"</span>&gt;</span>
+	    <span class="tag">&lt;<span class="title">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span>
+	  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	  <span class="vbscript">&lt;% } %&gt;</span>
+	<span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+	<span class="vbscript">&lt;% } %&gt;</span></span>
+</pre></td></tr></table></figure>
+</li>
+<li><p>萬一還是啟動不成功，請查閱 after_footer.ejs 是否具有以下代碼</p>
+<p>  <figure class="highlight js"><figcaption><span>themes/xxxx/layout/_partial/after_footer.ejs</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre>	&lt;% <span class="keyword">if</span> (page.comments){ %&gt;
+	<span class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comment"</span>&gt;</span>
+	  <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">class</span>=<span class="value">"title"</span>&gt;</span><span class="vbscript">&lt;%= __(<span class="comment">'comment') %&gt;</span></span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+
+	  <span class="vbscript">&lt;% <span class="keyword">if</span> (theme.comment_provider == <span class="string">"facebook"</span>) {
+	      <span class="keyword">if</span> (theme.facebook) { %&gt;</span>
+	      <span class="vbscript">&lt;%- partial(<span class="comment">'_partial/facebook_comment', {fbConfig: theme.facebook}) %&gt;</span></span>
+	      <span class="vbscript">&lt;% } %&gt;</span>
+	  <span class="vbscript">&lt;% } <span class="keyword">else</span> <span class="keyword">if</span>(config.disqus_shortname) { %&gt;</span>
+	  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"disqus_thread"</span>&gt;</span>
+	    <span class="tag">&lt;<span class="title">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span>
+	  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	  <span class="vbscript">&lt;% } %&gt;</span>
+	<span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+	<span class="vbscript">&lt;% } %&gt;</span></span>
+</pre></td></tr></table></figure></p>
+<h2 id="最後">最後</h2>
+<p>其實差不多了，想必配置成功了。</p>
+<p>End</p>
+</li>
+</ul>
+]]></content>
+    <summary type="html"><![CDATA[<h2 id="首先到Disqus去註冊帳號">首先到<a href="https://disqus.com/" target="_blank" rel="external">Disqus</a>去註冊帳號</h2>
+<p><img src="/css/images/blog/disqus1.png" alt="點選右上登入"><br>]]></summary>
+    
+      <category term="hexo" scheme="http://cc.woodstock.ml/tags/hexo/"/>
+    
+      <category term="nodejs" scheme="http://cc.woodstock.ml/tags/nodejs/"/>
+    
+      <category term="blog" scheme="http://cc.woodstock.ml/tags/blog/"/>
+    
+      <category term="disqus" scheme="http://cc.woodstock.ml/tags/disqus/"/>
+    
+      <category term="評論框" scheme="http://cc.woodstock.ml/tags/%E8%A9%95%E8%AB%96%E6%A1%86/"/>
+    
+      <category term="對話框" scheme="http://cc.woodstock.ml/tags/%E5%B0%8D%E8%A9%B1%E6%A1%86/"/>
+    
+      <category term="hexo" scheme="http://cc.woodstock.ml/categories/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hello Hexo]]></title>

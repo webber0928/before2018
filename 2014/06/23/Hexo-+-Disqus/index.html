@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo + Disqus (如何使用Disqus的評論框) | I&#39;m Webber</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="首先到Disqus去註冊帳號">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo + Disqus (如何使用Disqus的評論框)">
+<meta property="og:url" content="http://cc.woodstock.ml/2014/06/23/Hexo-+-Disqus/">
+<meta property="og:site_name" content="I'm Webber">
+<meta property="og:description" content="首先到Disqus去註冊帳號">
+<meta property="og:image" content="/css/images/blog/disqus1.png">
+<meta property="og:image" content="/css/images/blog/disqus2.png">
+<meta property="og:image" content="/css/images/blog/disqus3.png">
+<meta property="og:image" content="/css/images/blog/disqus4.png">
+<meta property="og:image" content="/css/images/blog/disqus5.png">
+<meta property="og:image" content="/css/images/blog/disqus6.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo + Disqus (如何使用Disqus的評論框)">
+<meta name="twitter:description" content="首先到Disqus去註冊帳號">
+  
+    <link rel="alternative" href="/atom.xml" title="I&#39;m Webber" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">I&#39;m Webber</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">白色的明天在等著我們</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://cc.woodstock.ml"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Hexo-+-Disqus" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/06/23/Hexo-+-Disqus/" class="article-date">
+  <time datetime="2014-06-23T00:27:40.000Z" itemprop="datePublished">6月 23 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo + Disqus (如何使用Disqus的評論框)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="首先到Disqus去註冊帳號">首先到<a href="https://disqus.com/" target="_blank" rel="external">Disqus</a>去註冊帳號</h2>
+<p><img src="/css/images/blog/disqus1.png" alt="點選右上登入"><br><a id="more"></a><br><img src="/css/images/blog/disqus2.png" alt="可以直接用google 或 facebook榜定"><br><img src="/css/images/blog/disqus3.png" alt="登入後點選右下方 *Add Disqus to your site*"><br><img src="/css/images/blog/disqus4.png" alt="設定 網站網址, disqus網址, 類別"></p>
+<pre><code><span class="string">"Choose your unique Disqus URL"</span> 的 <span class="string">"ccwoodstock"</span> 就是你的短網址
+</code></pre><p><img src="/css/images/blog/disqus5.png" alt="請選擇 Universal Code"><br><img src="/css/images/blog/disqus6.png" alt="照著頁面步驟嵌入hexo頁面即可"></p>
+<h2 id="設定Hexo">設定Hexo</h2>
+<ul>
+<li><p>到本機下，修改本機目錄下的 _confid.yml 在 disqus_shortname 貼上自己的 shortname</p>
+  <figure class="highlight sh"><figcaption><span>_confid.yml</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="preprocessor"># Disqus</span>
+disqus_shortname: ccwoodstock
+</pre></td></tr></table></figure>
+</li>
+<li><p>主題可能沒有 comment.ejs，請在目錄下增加代碼</p>
+  <figure class="highlight js"><figcaption><span>themes/xxxx/layout/_partial/comment.ejs</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre>	&lt;% <span class="keyword">if</span> (page.comments){ %&gt;
+	<span class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comment"</span>&gt;</span>
+	  <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">class</span>=<span class="value">"title"</span>&gt;</span><span class="vbscript">&lt;%= __(<span class="comment">'comment') %&gt;</span></span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+
+	  <span class="vbscript">&lt;% <span class="keyword">if</span> (theme.comment_provider == <span class="string">"facebook"</span>) {
+	      <span class="keyword">if</span> (theme.facebook) { %&gt;</span>
+	      <span class="vbscript">&lt;%- partial(<span class="comment">'_partial/facebook_comment', {fbConfig: theme.facebook}) %&gt;</span></span>
+	      <span class="vbscript">&lt;% } %&gt;</span>
+	  <span class="vbscript">&lt;% } <span class="keyword">else</span> <span class="keyword">if</span>(config.disqus_shortname) { %&gt;</span>
+	  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"disqus_thread"</span>&gt;</span>
+	    <span class="tag">&lt;<span class="title">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span>
+	  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	  <span class="vbscript">&lt;% } %&gt;</span>
+	<span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+	<span class="vbscript">&lt;% } %&gt;</span></span>
+</pre></td></tr></table></figure>
+</li>
+<li><p>萬一還是啟動不成功，請查閱 after_footer.ejs 是否具有以下代碼</p>
+<p>  <figure class="highlight js"><figcaption><span>themes/xxxx/layout/_partial/after_footer.ejs</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre>	&lt;% <span class="keyword">if</span> (page.comments){ %&gt;
+	<span class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comment"</span>&gt;</span>
+	  <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">class</span>=<span class="value">"title"</span>&gt;</span><span class="vbscript">&lt;%= __(<span class="comment">'comment') %&gt;</span></span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+
+	  <span class="vbscript">&lt;% <span class="keyword">if</span> (theme.comment_provider == <span class="string">"facebook"</span>) {
+	      <span class="keyword">if</span> (theme.facebook) { %&gt;</span>
+	      <span class="vbscript">&lt;%- partial(<span class="comment">'_partial/facebook_comment', {fbConfig: theme.facebook}) %&gt;</span></span>
+	      <span class="vbscript">&lt;% } %&gt;</span>
+	  <span class="vbscript">&lt;% } <span class="keyword">else</span> <span class="keyword">if</span>(config.disqus_shortname) { %&gt;</span>
+	  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"disqus_thread"</span>&gt;</span>
+	    <span class="tag">&lt;<span class="title">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span>
+	  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	  <span class="vbscript">&lt;% } %&gt;</span>
+	<span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+	<span class="vbscript">&lt;% } %&gt;</span></span>
+</pre></td></tr></table></figure></p>
+<h2 id="最後">最後</h2>
+<p>其實差不多了，想必配置成功了。</p>
+<p>End</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cc.woodstock.ml/2014/06/23/Hexo-+-Disqus/" data-id="0qfvwq0a4t06fhum" class="article-share-link">Share</a>
+      
+        <a href="http://cc.woodstock.ml/2014/06/23/Hexo-+-Disqus/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/disqus/">disqus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/對話框/">對話框</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/評論框/">評論框</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2014/06/18/Hello-Hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello Hexo</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/06/23/Hexo-+-Disqus/">Hexo + Disqus (如何使用Disqus的評論框)</a>
+          </li>
+        
+          <li>
+            <a href="/2014/06/18/Hello-Hexo/">Hello Hexo</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/blog/" style="font-size: 20.00px;">blog</a><a href="/tags/disqus/" style="font-size: 10.00px;">disqus</a><a href="/tags/hexo/" style="font-size: 20.00px;">hexo</a><a href="/tags/markdown/" style="font-size: 10.00px;">markdown</a><a href="/tags/md/" style="font-size: 10.00px;">md</a><a href="/tags/nodejs/" style="font-size: 20.00px;">nodejs</a><a href="/tags/對話框/" style="font-size: 10.00px;">對話框</a><a href="/tags/評論框/" style="font-size: 10.00px;">評論框</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06">六月 2014</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Webber Doe<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'ccwoodstockml';
+  
+  var disqus_url = 'http://cc.woodstock.ml/2014/06/23/Hexo-+-Disqus/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/script.js"></script>
+  </div>
+</body>
+</html>
