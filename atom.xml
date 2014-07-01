@@ -4,7 +4,7 @@
   <subtitle><![CDATA[白色的明天在等著我們]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://cc.woodstock.ml/"/>
-  <updated>2014-07-01T00:41:48.420Z</updated>
+  <updated>2014-07-01T01:41:41.442Z</updated>
   <id>http://cc.woodstock.ml/</id>
   
   <author>
@@ -13,6 +13,79 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[[Ngrok]讓你的 local web 映射在外網]]></title>
+    <link href="http://cc.woodstock.ml/2014/07/01/%5BNgrok%5D%E8%AE%93%E4%BD%A0%E7%9A%84localhost%E6%98%A0%E5%B0%84%E5%9C%A8%E5%A4%96%E7%B6%B2/"/>
+    <id>http://cc.woodstock.ml/2014/07/01/[Ngrok]讓你的localhost映射在外網/</id>
+    <published>2014-07-01T00:48:23.000Z</published>
+    <updated>2014-07-01T01:41:19.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="ngrok是什麼？">ngrok是什麼？</h4>
+<p>簡單來說<a href="https://ngrok.com/" target="_blank" rel="external">ngrok</a>可以在local端開啟一個隧道連到外網, 讓所有人都可以看得到你的local端!!<br><img src="https://camo.githubusercontent.com/f2d698991e6a0411680413ebcc15a6460b8beda3/68747470733a2f2f6e67726f6b2e636f6d2f7374617469632f696d672f6f766572766965772e706e67" alt="ngrok示意圖"></p>
+<h4 id="為什麼要使用ngrok？">為什麼要使用ngrok？</h4>
+<p><a id="more"></a><br>身為Web開發者，有時會將local的web網站佈署到外網，以供他人體驗或測試，通常我們會這麼做：</p>
+<ul>
+<li>找一台運行於外網的Web Server</li>
+<li>確認 Server上有網站所需要的環境或自行搭建</li>
+<li>將網站佈署到Server上</li>
+<li>修正結束後，再將網站從Server上刪除</li>
+</ul>
+<p>跟朋友炫耀網站有必要這麼累嗎 orz…</p>
+<p>但是有了<a href="https://ngrok.com/" target="_blank" rel="external">ngrok</a>之後，世界如同白色一樣簡單美好</p>
+<h3 id="Quick_Start">Quick Start</h3>
+<h4 id="Step_1:_Download">Step 1: Download</h4>
+<p>  <strong><a href="https://ngrok.com/#download" target="_blank" rel="external">ngrok</a></strong>  請選擇適合自己的版本下載</p>
+<h4 id="Step_2:_將ngrok解壓縮">Step 2: 將ngrok解壓縮</h4>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>unzip /path/to/ngrok.zip
+</pre></td></tr></table></figure>
+
+<h4 id="Step_3:_啟動">Step 3: 啟動</h4>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>ngrok <span class="number">8080</span>
+</pre></td></tr></table></figure>
+
+<p>啟動後會出現以下資訊, Forwarding就是你的外網Url</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="title">ngrok</span>
+
+Tunnel Status                 online
+Version                       <span class="number">1</span>.<span class="number">3</span>/<span class="number">1</span>.<span class="number">3</span>
+Forwarding                    <span class="url">http://3a4bfceb.ngrok.com</span> -&gt; <span class="number">127.0.0.1:8080</span>
+Forwarding                    <span class="url">https://3a4bfceb.ngrok.com</span> -&gt; <span class="number">127.0.0.1:8080</span>
+Web Interface                 <span class="url">http://127.0.0.1:4040</span>
+<span class="comment"># Conn                        0</span>
+Avg Conn Time                 <span class="number">0</span>.<span class="number">00ms</span>
+</pre></td></tr></table></figure>
+
+<p>有更多好的應用在拿來分享吧！今天先這樣吧</p>
+<h3 id="github：_https://github-com/bubenshchykov/ngrok">github： <a href="https://github.com/bubenshchykov/ngrok" target="_blank" rel="external">https://github.com/bubenshchykov/ngrok</a></h3>
+<h3 id="官網：_https://ngrok-com/">官網： <a href="https://ngrok.com/" target="_blank" rel="external">https://ngrok.com/</a></h3>
+]]></content>
+    <summary type="html"><![CDATA[<h4 id="ngrok是什麼？">ngrok是什麼？</h4>
+<p>簡單來說<a href="https://ngrok.com/" target="_blank" rel="external">ngrok</a>可以在local端開啟一個隧道連到外網, 讓所有人都可以看得到你的local端!!<br><img src="https://camo.githubusercontent.com/f2d698991e6a0411680413ebcc15a6460b8beda3/68747470733a2f2f6e67726f6b2e636f6d2f7374617469632f696d672f6f766572766965772e706e67" alt="ngrok示意圖"></p>
+<h4 id="為什麼要使用ngrok？">為什麼要使用ngrok？</h4>
+<p>]]></summary>
+    
+      <category term="ngrok" scheme="http://cc.woodstock.ml/tags/ngrok/"/>
+    
+      <category term="local" scheme="http://cc.woodstock.ml/tags/local/"/>
+    
+      <category term="client" scheme="http://cc.woodstock.ml/tags/client/"/>
+    
+      <category term="npm" scheme="http://cc.woodstock.ml/tags/npm/"/>
+    
+      <category term="npm" scheme="http://cc.woodstock.ml/categories/npm/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[特殊的HTML顯示]]></title>
