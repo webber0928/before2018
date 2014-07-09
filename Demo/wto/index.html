@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="images/favicon.ico">
+    <!-- CSS ====================================================== --> 
+      <link rel="stylesheet" href="css/smoothslides.theme.css">
+      <!-- Demo CSS (don't use) -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/stylesheet.css">
+
+    <!--[if lt IE 9]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+        <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+      </a>
+    </div>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" media="screen" href="css/ie.css">
+    <![endif]-->
+    <!--[if lt IE 10]>
+    <link rel="stylesheet" media="screen" href="css/ie1.css">
+    <![endif]-->
+  </head>
+  <body class="page1" id="top">
+    <!--==============================
+    header
+    =================================-->
+    <header>
+      <!--==============================
+      Stuck menu
+      =================================-->
+      <section id="stuck_container">
+        
+      </section>
+    </header>
+    <!--=====================
+    Content
+    ======================-->
+    <section class="content demo-centering">
+      <div class="ss-slides">
+        <div class="ss-slide" title="Ⓒ 2014 Taipei World Trade Center Club. All rights reserved">
+          <img src="css/a1.jpg" />
+        </div>
+        <div class="ss-slide" title="Ⓒ 2014 Taipei World Trade Center Club. All rights reserved">
+          <img src="css/a2.jpg" />
+        </div>
+        <div class="ss-slide" title="Ⓒ 2014 Taipei World Trade Center Club. All rights reserved">
+          <img src="css/a3.jpg" />
+        </div>
+        <div class="ss-slide" title="Ⓒ 2014 Taipei World Trade Center Club. All rights reserved">
+          <img src="css/a4.jpg" />
+        </div>
+        <div class="ss-slide" title="Ⓒ 2014 Taipei World Trade Center Club. All rights reserved">
+          <img src="css/a5.jpg" />
+        </div>
+      </div>
+    </section>
+      <!--==============================
+      footer
+      =================================-->
+    <footer id="footer">
+
+    </footer>
+  <!-- JS ======================================================= --> 
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/smoothslides.min.js"></script>
+    <script type="text/javascript">
+      /* wait for images to load */
+      $(window).load( function() {
+        $(document).smoothSlides({
+        duration: 10000,
+        navigation: false,
+        pagination: false,
+        effect: 'random'
+        // 'random', 'zoomIn', 'zoomOut', 'panLeft', 'panRight', 'panUp', 'panDown', 'crossFade','none'
+        /* options seperated by commas */
+        });
+      });
+    </script>
+  </body>
+</html>
