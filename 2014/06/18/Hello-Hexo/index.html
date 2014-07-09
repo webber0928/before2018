@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hello Hexo | I&#39;m Webber</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="這是我的第一個blog, 對於為什麼選擇hexo做我的blog呢？因為這可是nodejs + markdown 所組成的blog！！是不是很潮呀~!廢話不多說趕快看如何啟動吧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello Hexo">
+<meta property="og:url" content="http://cc.woodstock.ml/2014/06/18/Hello-Hexo/">
+<meta property="og:site_name" content="I'm Webber">
+<meta property="og:description" content="這是我的第一個blog, 對於為什麼選擇hexo做我的blog呢？因為這可是nodejs + markdown 所組成的blog！！是不是很潮呀~!廢話不多說趕快看如何啟動吧">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hello Hexo">
+<meta name="twitter:description" content="這是我的第一個blog, 對於為什麼選擇hexo做我的blog呢？因為這可是nodejs + markdown 所組成的blog！！是不是很潮呀~!廢話不多說趕快看如何啟動吧">
+  
+    <link rel="alternative" href="/atom.xml" title="I&#39;m Webber" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">I&#39;m Webber</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">白色的明天在等著我們</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://cc.woodstock.ml"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Hello-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/06/18/Hello-Hexo/" class="article-date">
+  <time datetime="2014-06-18T15:24:26.000Z" itemprop="datePublished">6月 18 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hello Hexo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>這是我的第一個blog, 對於為什麼選擇<a href="http://hexo.io" target="_blank" rel="external">hexo</a>做我的blog呢？<br>因為這可是nodejs + markdown 所組成的blog！！<br>是不是很潮呀~!<br>廢話不多說趕快看如何啟動吧<br><a id="more"></a></p>
+<h2 id="快速啟動">快速啟動</h2>
+<p>首先安裝 nvm + nodejs (ubuntu) :</p>
+<h3 id="nvm">nvm</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ curl https://raw.github.com/creationix/nvm/v0.<span class="number">4.0</span>/install.sh | sh
+</pre></td></tr></table></figure>
+
+<p>新增以下命令列到 <code>.bashrc</code> 的最後:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="comment"># set PATH so it includes user's private bin if it exists</span>
+<span class="keyword">if</span> [ <span class="operator">-d</span> <span class="string">"<span class="variable">$HOME</span>/.nvm/bin"</span> ] ; <span class="keyword">then</span>
+  <span class="keyword">export</span> PATH=<span class="string">"<span class="variable">$HOME</span>/.nvm/bin:<span class="variable">$PATH</span>"</span>
+  <span class="keyword">export</span> NVM_DIR=<span class="string">"<span class="variable">$HOME</span>/.nvm"</span>
+<span class="keyword">fi</span>
+[ <span class="operator">-s</span> <span class="string">"<span class="variable">$HOME</span>/.nvm/nvm.sh"</span> ] && . <span class="string">"<span class="variable">$HOME</span>/.nvm/nvm.sh"</span>
+</pre></td></tr></table></figure>
+
+<h3 id="nodejs">nodejs</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ nvm install v0.<span class="number">10.26</span>
+</pre></td></tr></table></figure>
+
+<p>接著安裝hexo:</p>
+<h3 id="hexo">hexo</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ npm install -g hexo
+</pre></td></tr></table></figure>
+
+<p>接著只需要幾個簡單的命令, 你就可以打理好一切</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre>$ hexo init      <span class="comment">#初始化</span>
+$ hexo n <span class="string">'title'</span> <span class="comment">#寫名為'title'的文章</span>
+$ hexo g         <span class="comment">#生成</span>
+$ hexo s         <span class="comment">#啟動, 預設為port:4000</span>
+</pre></td></tr></table></figure><br>真的超簡單的吧！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cc.woodstock.ml/2014/06/18/Hello-Hexo/" data-id="ehro6j8hkf9wm3wx" class="article-share-link">Share</a>
+      
+        <a href="http://cc.woodstock.ml/2014/06/18/Hello-Hexo/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/md/">md</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/06/23/Hexo-+-Disqus/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hexo + Disqus (如何使用Disqus的評論框)
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/07/01/[Ngrok]讓你的localhost映射在外網/">[Ngrok]讓你的 local web 映射在外網</a>
+          </li>
+        
+          <li>
+            <a href="/2014/06/23/特殊的HTML/">特殊的HTML顯示</a>
+          </li>
+        
+          <li>
+            <a href="/2014/06/23/HTML5-Tutorial/">HTML5 Tutorial</a>
+          </li>
+        
+          <li>
+            <a href="/2014/06/23/Hexo-+-Disqus/">Hexo + Disqus (如何使用Disqus的評論框)</a>
+          </li>
+        
+          <li>
+            <a href="/2014/06/18/Hello-Hexo/">Hello Hexo</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/html5/">html5</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/npm/">npm</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/blog/" style="font-size: 20.00px;">blog</a><a href="/tags/client/" style="font-size: 10.00px;">client</a><a href="/tags/css/" style="font-size: 10.00px;">css</a><a href="/tags/disqus/" style="font-size: 10.00px;">disqus</a><a href="/tags/hexo/" style="font-size: 20.00px;">hexo</a><a href="/tags/html/" style="font-size: 20.00px;">html</a><a href="/tags/html5/" style="font-size: 20.00px;">html5</a><a href="/tags/local/" style="font-size: 10.00px;">local</a><a href="/tags/markdown/" style="font-size: 10.00px;">markdown</a><a href="/tags/md/" style="font-size: 10.00px;">md</a><a href="/tags/ngrok/" style="font-size: 10.00px;">ngrok</a><a href="/tags/nodejs/" style="font-size: 20.00px;">nodejs</a><a href="/tags/npm/" style="font-size: 10.00px;">npm</a><a href="/tags/對話框/" style="font-size: 10.00px;">對話框</a><a href="/tags/評論框/" style="font-size: 10.00px;">評論框</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07">七月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06">六月 2014</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Webber Doe<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'ccwoodstockml';
+  
+  var disqus_url = 'http://cc.woodstock.ml/2014/06/18/Hello-Hexo/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/script.js"></script>
+  </div>
+</body>
+</html>

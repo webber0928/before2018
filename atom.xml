@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[I'm Webber]]></title>
+  <subtitle><![CDATA[白色的明天在等著我們]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://cc.woodstock.ml/"/>
+  <updated>2014-07-01T01:41:41.442Z</updated>
+  <id>http://cc.woodstock.ml/</id>
+  
+  <author>
+    <name><![CDATA[Webber Doe]]></name>
+    <email><![CDATA[bird23074035@gmail.com]]></email>
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[[Ngrok]讓你的 local web 映射在外網]]></title>
+    <link href="http://cc.woodstock.ml/2014/07/01/%5BNgrok%5D%E8%AE%93%E4%BD%A0%E7%9A%84localhost%E6%98%A0%E5%B0%84%E5%9C%A8%E5%A4%96%E7%B6%B2/"/>
+    <id>http://cc.woodstock.ml/2014/07/01/[Ngrok]讓你的localhost映射在外網/</id>
+    <published>2014-07-01T00:48:23.000Z</published>
+    <updated>2014-07-01T01:41:19.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="ngrok是什麼？">ngrok是什麼？</h4>
+<p>簡單來說<a href="https://ngrok.com/" target="_blank" rel="external">ngrok</a>可以在local端開啟一個隧道連到外網, 讓所有人都可以看得到你的local端!!<br><img src="https://camo.githubusercontent.com/f2d698991e6a0411680413ebcc15a6460b8beda3/68747470733a2f2f6e67726f6b2e636f6d2f7374617469632f696d672f6f766572766965772e706e67" alt="ngrok示意圖"></p>
+<h4 id="為什麼要使用ngrok？">為什麼要使用ngrok？</h4>
+<p><a id="more"></a><br>身為Web開發者，有時會將local的web網站佈署到外網，以供他人體驗或測試，通常我們會這麼做：</p>
+<ul>
+<li>找一台運行於外網的Web Server</li>
+<li>確認 Server上有網站所需要的環境或自行搭建</li>
+<li>將網站佈署到Server上</li>
+<li>修正結束後，再將網站從Server上刪除</li>
+</ul>
+<p>跟朋友炫耀網站有必要這麼累嗎 orz…</p>
+<p>但是有了<a href="https://ngrok.com/" target="_blank" rel="external">ngrok</a>之後，世界如同白色一樣簡單美好</p>
+<h3 id="Quick_Start">Quick Start</h3>
+<h4 id="Step_1:_Download">Step 1: Download</h4>
+<p>  <strong><a href="https://ngrok.com/#download" target="_blank" rel="external">ngrok</a></strong>  請選擇適合自己的版本下載</p>
+<h4 id="Step_2:_將ngrok解壓縮">Step 2: 將ngrok解壓縮</h4>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>unzip /path/to/ngrok.zip
+</pre></td></tr></table></figure>
+
+<h4 id="Step_3:_啟動">Step 3: 啟動</h4>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>ngrok <span class="number">8080</span>
+</pre></td></tr></table></figure>
+
+<p>啟動後會出現以下資訊, Forwarding就是你的外網Url</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="title">ngrok</span>
+
+Tunnel Status                 online
+Version                       <span class="number">1</span>.<span class="number">3</span>/<span class="number">1</span>.<span class="number">3</span>
+Forwarding                    <span class="url">http://3a4bfceb.ngrok.com</span> -&gt; <span class="number">127.0.0.1:8080</span>
+Forwarding                    <span class="url">https://3a4bfceb.ngrok.com</span> -&gt; <span class="number">127.0.0.1:8080</span>
+Web Interface                 <span class="url">http://127.0.0.1:4040</span>
+<span class="comment"># Conn                        0</span>
+Avg Conn Time                 <span class="number">0</span>.<span class="number">00ms</span>
+</pre></td></tr></table></figure>
+
+<p>有更多好的應用在拿來分享吧！今天先這樣吧</p>
+<h3 id="github：_https://github-com/bubenshchykov/ngrok">github： <a href="https://github.com/bubenshchykov/ngrok" target="_blank" rel="external">https://github.com/bubenshchykov/ngrok</a></h3>
+<h3 id="官網：_https://ngrok-com/">官網： <a href="https://ngrok.com/" target="_blank" rel="external">https://ngrok.com/</a></h3>
+]]></content>
+    <summary type="html"><![CDATA[<h4 id="ngrok是什麼？">ngrok是什麼？</h4>
+<p>簡單來說<a href="https://ngrok.com/" target="_blank" rel="external">ngrok</a>可以在local端開啟一個隧道連到外網, 讓所有人都可以看得到你的local端!!<br><img src="https://camo.githubusercontent.com/f2d698991e6a0411680413ebcc15a6460b8beda3/68747470733a2f2f6e67726f6b2e636f6d2f7374617469632f696d672f6f766572766965772e706e67" alt="ngrok示意圖"></p>
+<h4 id="為什麼要使用ngrok？">為什麼要使用ngrok？</h4>
+<p>]]></summary>
+    
+      <category term="ngrok" scheme="http://cc.woodstock.ml/tags/ngrok/"/>
+    
+      <category term="local" scheme="http://cc.woodstock.ml/tags/local/"/>
+    
+      <category term="client" scheme="http://cc.woodstock.ml/tags/client/"/>
+    
+      <category term="npm" scheme="http://cc.woodstock.ml/tags/npm/"/>
+    
+      <category term="npm" scheme="http://cc.woodstock.ml/categories/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[特殊的HTML顯示]]></title>
+    <link href="http://cc.woodstock.ml/2014/06/23/%E7%89%B9%E6%AE%8A%E7%9A%84HTML/"/>
+    <id>http://cc.woodstock.ml/2014/06/23/特殊的HTML/</id>
+    <published>2014-06-23T01:59:48.000Z</published>
+    <updated>2014-06-23T02:06:33.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="文繞圖">文繞圖</h3>
+<ul>
+<li><p><code>&lt;em&gt;</code><br>  italic type</p>
+</li>
+<li><p><code>&lt;p&gt;</code></p>
+<a id="more"></a></li>
+<li><code>&lt;pre&gt;</code><br>  block type<h3 id="漸層色">漸層色</h3>
+<figure class="highlight css"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre>/*Chrome/safari4+*/
+
+background:-webkit-gradient(linear, left top, left bottom, from(#00475E), to(#007276));/*由上到下*/ 
+background:-webkit-gradient(linear, left top, right top, from(#00475E), to(#007276));/*由左至右*/ 
+background:webkit-linear-gradient(top, #00475E, #007276);/*在Chrome 10 之後語法可簡化為:*/ 
+background:-moz-linear-gradient(top, #00475E, #007276);/*Firefox 3.6+ /由上到下/ */
+background:-moz-linear-gradient(left, #00475E, #007276);/*由左至右*/ 
+
+/*IE6~IE8*/
+
+filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=’#00475E’, endColorstr=’#007276’);
+</pre></td></tr></table></figure><br>###陰影與圓角<br><figure class="highlight css"><figcaption><span>CSS3已經定義了 border-radius (圓角)及 box-shadow (陰影)兩種屬性。</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="tag">border-radius</span>: 15<span class="tag">px</span>;
+<span class="tag">box-shadow</span>: 10<span class="tag">px</span> 10<span class="tag">px</span> 20<span class="tag">px</span> <span class="id">#000</span>;
+
+<span class="tag">Firefox</span>、<span class="tag">Safari</span>、<span class="tag">Chrome</span>也有自己的特殊語法，但新版軟體已經支元<span class="tag">CSS3</span>提供的上述語法。
+<span class="tag">-moz-border-radius</span>: 15<span class="tag">px</span>;
+<span class="tag">-webkit-border-radius</span>: 15<span class="tag">px</span>;
+<span class="tag">-moz-box-shadow</span>: 10<span class="tag">px</span> 10<span class="tag">px</span> 20<span class="tag">px</span> <span class="id">#000</span>;
+<span class="tag">-webkit-box-shadow</span>: 10<span class="tag">px</span> 10<span class="tag">px</span> 20<span class="tag">px</span> <span class="id">#000</span>;
+</pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+    <summary type="html"><![CDATA[<h3 id="文繞圖">文繞圖</h3>
+<ul>
+<li><p><code>&lt;em&gt;</code><br>  italic type</p>
+</li>
+<li><p><code>&lt;p&gt;</code></p>
+]]></summary>
+    
+      <category term="html" scheme="http://cc.woodstock.ml/tags/html/"/>
+    
+      <category term="html5" scheme="http://cc.woodstock.ml/tags/html5/"/>
+    
+      <category term="css" scheme="http://cc.woodstock.ml/tags/css/"/>
+    
+      <category term="html5" scheme="http://cc.woodstock.ml/categories/html5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[HTML5 Tutorial]]></title>
+    <link href="http://cc.woodstock.ml/2014/06/23/HTML5-Tutorial/"/>
+    <id>http://cc.woodstock.ml/2014/06/23/HTML5-Tutorial/</id>
+    <published>2014-06-23T01:33:36.000Z</published>
+    <updated>2014-06-23T01:58:11.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="What_is_HTML?">What is HTML?</h3>
+<p>  HTML是一種優越的語言，在web瀏覽器上顯示資訊，也有其他類似的語言 (e.g : XML)但是目前最常用的還是HTML。</p>
+<p>  HTML在負責兩台電腦之間的溝通(Server, Client)之間的溝通和資訊傳遞， 總體來說Server是資訊的提供者，而Client是資訊的索求者。</p>
+<p><a id="more"></a></p>
+<h3 id="What_is_HTML5?">What is HTML5?</h3>
+<p>  HTML5和HTML4.01的Tag並不完全一樣，例如<code>&lt;font&gt;</code>這一個Tag在HTML5已經不再使用， 但是在HTML4.01仍可以使用，</p>
+<h3 id="HTML5_Tag">HTML5 Tag</h3>
+<ul>
+<li><p><code>&lt;!– 這是註解 –&gt;</code></p>
+<p>在HTML中加入註解，不會顯示於頁面</p>
+</li>
+<li><p><code>&lt;!DOCTYPE html&gt;</code></p>
+<p>宣告此文件的程式碼為html，</p>
+</li>
+<li><p><code>&lt;a href=’http://......’&gt;某頁面&lt;/a&gt;</code></p>
+<p>  建立一個超連結使可以連結到另一個頁面</p>
+</li>
+<li><p><code>&lt;abbr&gt;.....&lt;/abbr&gt;</code></p>
+<p>  縮寫標籤，如：HTML</p>
+</li>
+<li><p><code>&lt;address&gt;......&lt;/address&gt;</code></p>
+<p>  網路位址或地址等資料，這個tag裡不能包含<code>&lt;article&gt;, &lt;aside&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;hgroup&gt;, &lt;h1&gt;-&lt;h6&gt;</code> 或其他的 <code>&lt;address&gt;</code> 標籤</p>
+</li>
+<li><p><code>&lt;area&gt;...&lt;/area&gt;</code></p>
+<p>  定義圖片的區塊座標</p>
+</li>
+<li><p><code>&lt;span&gt;&lt;/span&gt;</code></p>
+<p>  使用於inline 的段落 grouping 或 css 控制</p>
+</li>
+<li><p><code>&lt;div&gt;&lt;/div&gt;</code></p>
+<p>  區塊的grouping 或 css 控制</p>
+</li>
+<li><p><code>&lt;fieldset&gt; form element&lt;/fieldset&gt;</code></p>
+<p>  form element grouping tag</p>
+</li>
+<li><p><code>&lt;legend&gt;&lt;/legend&gt;</code></p>
+<p>  <code>&lt;fieldset&gt;</code> 或是 <code>&lt;detail&gt;</code> <code>&lt;figure&gt;</code> 這三類型tag使用時，可以用<code>&lt;legend&gt;</code>標示這三個內容的標題</p>
+</li>
+</ul>
+<h3 id="參考資料：">參考資料：</h3>
+<p><a href="http://html-5-tutorial.com" target="_blank" rel="external">HTML5 Tutorial</a></p>
+<p><a href="http://www.quackit.com/" target="_blank" rel="external">HTML Tag Tutorial</a></p>
+]]></content>
+    <summary type="html"><![CDATA[<h3 id="What_is_HTML?">What is HTML?</h3>
+<p>  HTML是一種優越的語言，在web瀏覽器上顯示資訊，也有其他類似的語言 (e.g : XML)但是目前最常用的還是HTML。</p>
+<p>  HTML在負責兩台電腦之間的溝通(Server, Client)之間的溝通和資訊傳遞， 總體來說Server是資訊的提供者，而Client是資訊的索求者。</p>
+<p>]]></summary>
+    
+      <category term="html" scheme="http://cc.woodstock.ml/tags/html/"/>
+    
+      <category term="html5" scheme="http://cc.woodstock.ml/tags/html5/"/>
+    
+      <category term="html5" scheme="http://cc.woodstock.ml/categories/html5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo + Disqus (如何使用Disqus的評論框)]]></title>
+    <link href="http://cc.woodstock.ml/2014/06/23/Hexo-+-Disqus/"/>
+    <id>http://cc.woodstock.ml/2014/06/23/Hexo-+-Disqus/</id>
+    <published>2014-06-23T00:27:40.000Z</published>
+    <updated>2014-06-23T01:38:45.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="首先到Disqus去註冊帳號">首先到<a href="https://disqus.com/" target="_blank" rel="external">Disqus</a>去註冊帳號</h2>
+<p><img src="/css/images/blog/disqus1.png" alt="點選右上登入"><br><a id="more"></a><br><img src="/css/images/blog/disqus2.png" alt="可以直接用google 或 facebook榜定"><br><img src="/css/images/blog/disqus3.png" alt="登入後點選右下方 *Add Disqus to your site*"><br><img src="/css/images/blog/disqus4.png" alt="設定 網站網址, disqus網址, 類別"></p>
+<pre><code><span class="string">"Choose your unique Disqus URL"</span> 的 <span class="string">"ccwoodstock"</span> 就是你的短網址
+</code></pre><p><img src="/css/images/blog/disqus5.png" alt="請選擇 Universal Code"><br><img src="/css/images/blog/disqus6.png" alt="照著頁面步驟嵌入hexo頁面即可"></p>
+<h2 id="設定Hexo">設定Hexo</h2>
+<ul>
+<li><p>到本機下，修改本機目錄下的 _confid.yml 在 disqus_shortname 貼上自己的 shortname</p>
+  <figure class="highlight sh"><figcaption><span>_confid.yml</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="preprocessor"># Disqus</span>
+disqus_shortname: ccwoodstock
+</pre></td></tr></table></figure>
+</li>
+<li><p>主題可能沒有 comment.ejs，請在目錄下增加代碼</p>
+  <figure class="highlight js"><figcaption><span>themes/xxxx/layout/_partial/comment.ejs</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre>	&lt;% <span class="keyword">if</span> (config.disqus_shortname && page.comments){ %&gt;
+	<span class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comment"</span>&gt;</span>
+	  #你的通用代码
+	<span class="vbscript">&lt;% } %&gt;</span></span>
+</pre></td></tr></table></figure><br>  貼完應該會跟下面一樣<br><br>  <figure class="highlight js"><figcaption><span>themes/xxxx/layout/_partial/comment.ejs</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre>	&lt;% <span class="keyword">if</span> (page.comments){ %&gt;
+	<span class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comment"</span>&gt;</span>
+	  <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">class</span>=<span class="value">"title"</span>&gt;</span><span class="vbscript">&lt;%= __(<span class="comment">'comment') %&gt;</span></span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+
+	  <span class="vbscript">&lt;% <span class="keyword">if</span> (theme.comment_provider == <span class="string">"facebook"</span>) {
+	      <span class="keyword">if</span> (theme.facebook) { %&gt;</span>
+	      <span class="vbscript">&lt;%- partial(<span class="comment">'_partial/facebook_comment', {fbConfig: theme.facebook}) %&gt;</span></span>
+	      <span class="vbscript">&lt;% } %&gt;</span>
+	  <span class="vbscript">&lt;% } <span class="keyword">else</span> <span class="keyword">if</span>(config.disqus_shortname) { %&gt;</span>
+	  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"disqus_thread"</span>&gt;</span>
+	    <span class="tag">&lt;<span class="title">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span>
+	  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	  <span class="vbscript">&lt;% } %&gt;</span>
+	<span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+	<span class="vbscript">&lt;% } %&gt;</span></span>
+</pre></td></tr></table></figure>
+</li>
+<li><p>萬一還是啟動不成功，請查閱 after_footer.ejs 是否具有以下代碼</p>
+<p>  <figure class="highlight js"><figcaption><span>themes/xxxx/layout/_partial/after_footer.ejs</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre>	&lt;% <span class="keyword">if</span> (page.comments){ %&gt;
+	<span class="xml"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comment"</span>&gt;</span>
+	  <span class="tag">&lt;<span class="title">h1</span> <span class="attribute">class</span>=<span class="value">"title"</span>&gt;</span><span class="vbscript">&lt;%= __(<span class="comment">'comment') %&gt;</span></span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+
+	  <span class="vbscript">&lt;% <span class="keyword">if</span> (theme.comment_provider == <span class="string">"facebook"</span>) {
+	      <span class="keyword">if</span> (theme.facebook) { %&gt;</span>
+	      <span class="vbscript">&lt;%- partial(<span class="comment">'_partial/facebook_comment', {fbConfig: theme.facebook}) %&gt;</span></span>
+	      <span class="vbscript">&lt;% } %&gt;</span>
+	  <span class="vbscript">&lt;% } <span class="keyword">else</span> <span class="keyword">if</span>(config.disqus_shortname) { %&gt;</span>
+	  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"disqus_thread"</span>&gt;</span>
+	    <span class="tag">&lt;<span class="title">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span>
+	  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+	  <span class="vbscript">&lt;% } %&gt;</span>
+	<span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+	<span class="vbscript">&lt;% } %&gt;</span></span>
+</pre></td></tr></table></figure></p>
+<h2 id="最後">最後</h2>
+<p>其實差不多了，想必配置成功了。</p>
+<p>End</p>
+</li>
+</ul>
+]]></content>
+    <summary type="html"><![CDATA[<h2 id="首先到Disqus去註冊帳號">首先到<a href="https://disqus.com/" target="_blank" rel="external">Disqus</a>去註冊帳號</h2>
+<p><img src="/css/images/blog/disqus1.png" alt="點選右上登入"><br>]]></summary>
+    
+      <category term="hexo" scheme="http://cc.woodstock.ml/tags/hexo/"/>
+    
+      <category term="nodejs" scheme="http://cc.woodstock.ml/tags/nodejs/"/>
+    
+      <category term="blog" scheme="http://cc.woodstock.ml/tags/blog/"/>
+    
+      <category term="disqus" scheme="http://cc.woodstock.ml/tags/disqus/"/>
+    
+      <category term="評論框" scheme="http://cc.woodstock.ml/tags/%E8%A9%95%E8%AB%96%E6%A1%86/"/>
+    
+      <category term="對話框" scheme="http://cc.woodstock.ml/tags/%E5%B0%8D%E8%A9%B1%E6%A1%86/"/>
+    
+      <category term="hexo" scheme="http://cc.woodstock.ml/categories/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello Hexo]]></title>
+    <link href="http://cc.woodstock.ml/2014/06/18/Hello-Hexo/"/>
+    <id>http://cc.woodstock.ml/2014/06/18/Hello-Hexo/</id>
+    <published>2014-06-18T15:24:26.000Z</published>
+    <updated>2014-06-20T02:52:58.000Z</updated>
+    <content type="html"><![CDATA[<p>這是我的第一個blog, 對於為什麼選擇<a href="http://hexo.io" target="_blank" rel="external">hexo</a>做我的blog呢？<br>因為這可是nodejs + markdown 所組成的blog！！<br>是不是很潮呀~!<br>廢話不多說趕快看如何啟動吧<br><a id="more"></a></p>
+<h2 id="快速啟動">快速啟動</h2>
+<p>首先安裝 nvm + nodejs (ubuntu) :</p>
+<h3 id="nvm">nvm</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ curl https://raw.github.com/creationix/nvm/v0.<span class="number">4.0</span>/install.sh | sh
+</pre></td></tr></table></figure>
+
+<p>新增以下命令列到 <code>.bashrc</code> 的最後:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="comment"># set PATH so it includes user's private bin if it exists</span>
+<span class="keyword">if</span> [ <span class="operator">-d</span> <span class="string">"<span class="variable">$HOME</span>/.nvm/bin"</span> ] ; <span class="keyword">then</span>
+  <span class="keyword">export</span> PATH=<span class="string">"<span class="variable">$HOME</span>/.nvm/bin:<span class="variable">$PATH</span>"</span>
+  <span class="keyword">export</span> NVM_DIR=<span class="string">"<span class="variable">$HOME</span>/.nvm"</span>
+<span class="keyword">fi</span>
+[ <span class="operator">-s</span> <span class="string">"<span class="variable">$HOME</span>/.nvm/nvm.sh"</span> ] && . <span class="string">"<span class="variable">$HOME</span>/.nvm/nvm.sh"</span>
+</pre></td></tr></table></figure>
+
+<h3 id="nodejs">nodejs</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ nvm install v0.<span class="number">10.26</span>
+</pre></td></tr></table></figure>
+
+<p>接著安裝hexo:</p>
+<h3 id="hexo">hexo</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>$ npm install -g hexo
+</pre></td></tr></table></figure>
+
+<p>接著只需要幾個簡單的命令, 你就可以打理好一切</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre>$ hexo init      <span class="comment">#初始化</span>
+$ hexo n <span class="string">'title'</span> <span class="comment">#寫名為'title'的文章</span>
+$ hexo g         <span class="comment">#生成</span>
+$ hexo s         <span class="comment">#啟動, 預設為port:4000</span>
+</pre></td></tr></table></figure><br>真的超簡單的吧！</p>
+]]></content>
+    <summary type="html"><![CDATA[<p>這是我的第一個blog, 對於為什麼選擇<a href="http://hexo.io" target="_blank" rel="external">hexo</a>做我的blog呢？<br>因為這可是nodejs + markdown 所組成的blog！！<br>是不是很潮呀~!<br>廢話不多說趕快看如何啟動吧<br>]]></summary>
+    
+      <category term="hexo" scheme="http://cc.woodstock.ml/tags/hexo/"/>
+    
+      <category term="nodejs" scheme="http://cc.woodstock.ml/tags/nodejs/"/>
+    
+      <category term="blog" scheme="http://cc.woodstock.ml/tags/blog/"/>
+    
+      <category term="md" scheme="http://cc.woodstock.ml/tags/md/"/>
+    
+      <category term="markdown" scheme="http://cc.woodstock.ml/tags/markdown/"/>
+    
+      <category term="hexo" scheme="http://cc.woodstock.ml/categories/hexo/"/>
+    
+  </entry>
+  
+</feed>
