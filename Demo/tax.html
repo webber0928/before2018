@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      console.log($('.incomeTax').val());
+      $('.income').on('keyup', function(){
+        var val = $(this).val() * 1;
+        incomeTax( val )
+      })
+      function incomeTax( income ){
+        var n = 300000;
+        if( income <= n ){
+          $('.tax').text(income * 0.06)
+        }
+        if( income > n ){
+          var front = n * 0.06
+            ,rear = (income - n) * 0.13;
+          $('.tax').text(front+rear)
+        }
+      }
+
+    })
+    </script>
+    <style type="text/css">
+      body{
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>計算所得稅</h2>
+    <input type="text" class="income" placeholder="請輸入您的收入">
+    <p>所得稅： </p>
+    <p class="tax"></p>
+  </body>
+</html>
