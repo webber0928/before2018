@@ -16,7 +16,80 @@
     <link href='css/pageInit.css' rel='stylesheet'>
     <link href='css/main.css' rel='stylesheet'>
     <link href='css/page2.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/smoothslides.theme.css">
+<!--
     <script src='js/modernizr-2.0.6.min.js'></script>
+-->
+    <script src='js/jquery-1.8.3.min.js'></script>
+    <script type="text/javascript" src="js/smoothslides.min.js"></script>
+    <script>
+        $(function(){
+
+            $(window).load( function() {
+                $(document).smoothSlides({
+                duration: 12000,
+                navigation: false,
+                pagination: false,
+                order: 'random',
+                effect: 'random',
+                // 'random', 'zoomIn', 'zoomOut', 'panLeft', 'panRight', 'panUp', 'panDown', 'crossFade','none'
+                /* options seperated by commas */
+                });
+            });
+
+            $('.logo').css("cursor", "pointer").on('click',function(){
+                window.location.href = 'index.html';
+            });
+
+            $("#summary").click(function(){
+                $('#aboutus_manage').hide();
+                $("#aboutus_locate").hide();
+                //~ summary內的三個tag要先隱藏
+                $("#summary_img").hide();
+                $("#summary_heading").hide();
+                $("#summary_text").hide();
+                
+                $('#aboutus_about').show();
+                
+                $("#summary_img").slideDown(1500);
+                $("#summary_heading").fadeIn(1500);
+                $("#summary_text").slideDown(1500);
+            });
+            $("#business_philosophy").click(function(){
+                $('#aboutus_about').hide();
+                $('#aboutus_locate').hide();
+                //
+                $("#business_philosophy_img").hide();
+                $("#business_philosophy_heading").hide();
+                $("#business_philosophy_text").hide();
+                
+                $("#aboutus_manage").fadeIn(1000);
+                
+                $("#business_philosophy_img").slideDown(1500);
+                $("#business_philosophy_heading").fadeIn(1500);
+                $("#business_philosophy_text").slideDown(1500);
+
+            });
+            $("#map_location").click(function(){
+                $("#aboutus_about").hide();
+                $('#aboutus_manage').hide();
+                //
+                $("#map_location_img").hide();
+                $("#map_location_heading").hide();
+                $("#map_location_text").hide();
+                
+                $("#aboutus_locate").fadeIn(1200);
+                
+                $("#map_location_img").slideDown(1500);
+                $("#map_location_heading").fadeIn(1500);
+                $("#map_location_text").slideDown(1500);
+                
+
+            });
+            $("#summary").click();
+        });
+
+    </script>
 </head>
 
 <body>
@@ -24,6 +97,17 @@
 
         <div class="wrapper">
 
+            <div class="ss-slides">
+                <div class="ss-slide">
+                  <img src="images/bg1.jpg" />
+                </div>
+                <div class="ss-slide">
+                  <img src="images/bg2.jpg" />
+                </div>
+                <div class="ss-slide">
+                  <img src="images/bg3.jpg" />
+                </div>
+            </div>
 
             <!-- <header>header</header> -->
             <div id='main' role='main'>
@@ -39,16 +123,16 @@
 
         </div>
 
-        <div class="descbar2">
-            <div class="innerWrapper" id="aboutus_about">
+        <div class="descbar2" >
+            <div class="innerWrapper" id="aboutus_about" >
                 <div class="pic">
-                    <div class="picBox">
+                    <div class="picBox" id="summary_img" style="display:none;">
                         <img src="images/page2/about.jpg" alt="">
                     </div>
                 </div>
                 <div class="mainText">
                     <div class="header">
-                        <h3>
+                        <h3 id="summary_heading" style="display:none;">
                             <img src="images/page2/aboutus_about.png" alt="">
                         </h3>&nbsp;&nbsp;
                         <!-- <h4>經營理念</h4> -->
@@ -62,7 +146,7 @@
 
                     <hr>
                     <div class="body">
-                        <p>
+                        <p id="summary_text" style="display:none;">
                             本聯誼社位於台北世界貿易中心國際貿易大樓33、34樓，
                             <br>面積共計1,500坪，地下三樓備有266個停車位。
                             <br>33樓是宴會廰及西餐廰，
@@ -79,13 +163,13 @@
 
             <div class="innerWrapper" id="aboutus_manage">
                 <div class="pic">
-                    <div class="picBox">
+                    <div class="picBox" id="business_philosophy_img" style="display:none">
                         <img src="images/page2/manage.jpg" alt="">
                     </div>
                 </div>
                 <div class="mainText">
                     <div class="header">
-                        <h3>
+                        <h3 id="business_philosophy_heading" style="display:none;">
                             <img src="images/page2/aboutus_manage.png" alt="">
                         </h3>&nbsp;&nbsp;
                         <!-- <h4>經營理念</h4> -->
@@ -98,7 +182,7 @@
                     </div>
 
                     <hr>
-                    <div class="body">
+                    <div class="body" id="business_philosophy_text" style="display:none;">
                         <p>
                             聯誼社以提供最好設施、最佳的效能與最貼心的服務為核心經營理念，
                             <br>並以裝潢高雅之中西餐廳及多功能宴會廳，
@@ -112,15 +196,15 @@
 
             </div>
 
-            <div class="innerWrapper" id="aboutus_locate">
+            <div class="innerWrapper" id="aboutus_locate" >
                 <div class="pic">
-                    <div class="picBox">
+                    <div class="picBox" id="map_location_img">
                         <img src="images/page2/locate.jpg" alt="">
                     </div>
                 </div>
                 <div class="mainText">
                     <div class="header">
-                        <h3>
+                        <h3 id="map_location_heading">
                             <img src="images/page2/aboutus_locate.png" alt="">
                         </h3>&nbsp;&nbsp;
                         <!-- <h4>經營理念</h4> -->
@@ -134,7 +218,7 @@
 
                     <hr>
                     <div class="body">
-                        <p>
+                        <p id="map_location_text">
                             台北世界貿易中心聯誼社
                             <br>地址：台北市基隆路一段333號33-34樓
                             <br>服務電話：02-27232939
@@ -164,21 +248,26 @@
         <div class="menu2bar">
             <div class=" innerWrapper">
                 <div class="menu2">
-
                     <ul>
                         <li class="item1">
-                            <a href="" class="act first">
-                                <!-- <img src="images/menu2/menu2_1.png" alt="聯誼社簡介" > -->
+                            <a class="act first" id="summary">
+<!--
+                                 <img src="images/menu2/menu2_1.png" alt="聯誼社簡介" > 
+-->
                             </a>
                         </li>
                         <li class="item2">
-                            <a href="">
-                                <!-- <img src="images/menu2/menu2_2.png" alt="經營理念" > -->
+                            <a id="business_philosophy">
+<!--
+                                 <img src="images/menu2/menu2_2.png" alt="經營理念" > 
+-->
                             </a>
                         </li>
                         <li class="item3">
-                            <a href="">
-                                <!-- <img src="images/menu2/menu2_3.png" alt="地理位置" > -->
+                            <a id="map_location">
+<!--
+                                 <img src="images/menu2/menu2_3.png" alt="地理位置" > 
+-->
                             </a>
                         </li>
                     </ul>
@@ -288,7 +377,6 @@
 
     </div>
 
-    <script src='js/jquery-1.6.2.min.js'></script>
     <script src='js/plugins.js'></script>
     <script src='js/script.js'></script>
     <!--[if lt IE 7]>

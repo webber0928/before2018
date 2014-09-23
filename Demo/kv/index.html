@@ -16,7 +16,37 @@
     <link rel="stylesheet" href="css/smoothslides.theme.css">
     <link href='css/pageInit.css' rel='stylesheet'>
     <link href='css/main.css' rel='stylesheet'>
+<!--
     <script src='js/modernizr-2.0.6.min.js'></script>
+-->
+<!--
+    <script src='js/jquery-1.6.2.min.js'></script>
+-->
+    <script src='js/jquery-1.8.3.min.js'></script>
+<!--
+    <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+-->
+    <script>
+         $(function(){
+          //~ $('#button_test').click(function(){
+            //$("#test1").show(500);
+            //~ $("#test").fadeIn(8000);
+            $("#test1").fadeIn(7000);
+            $("#test2").fadeIn(7000);
+            $('footer').slideDown(2000);
+            $('#menubar').slideDown(2000);
+            
+            //~ $("#test2").animate({
+              //~ width: "35%",
+              //~ //opacity: 0.9, //透明度
+              //~ marginLeft: "0.5in",
+              //~ fontSize: "4em", 
+            //~ }, 5500);
+            
+          //~ });
+        });
+    
+    </script>
 </head>
 
 <body>
@@ -41,16 +71,23 @@
 
         <div class="descbar">
             <div class="innerWrapper">
-                <div class="title">
-                    <!-- <p>歡迎您來到位於142公尺最具高度，最有視野的頂級商務會館。</p>
-                    <h1>Welcome</h1> -->
+                <div class="title" id="test" style="">
+                    <p id="test1" style="display:none;width:190%;">歡迎您來到位於142公尺最具高度，最有視野的頂級商務會館。
+                    <span id="test2"style="display:none;font-size:4em;">Welcome</span>
+                    </p>
+                     
+<!--
                     <img src="images/welcome.png" alt="">
+-->
                 </div>
+<!--
+                <button id="button_test">test</button>
+-->
             </div>
 
         </div>
         <div class="menu1bar">
-            <div class=" innerWrapper">
+            <div class=" innerWrapper" id="menubar" style="display:none;">
                 <div class="logo">
                     <img src="images/logo.png" alt="">
                     <!-- <p>臺北世界貿易中心聯誼社</p> -->
@@ -119,7 +156,7 @@
                 </div>
             </div>
         </div>
-        <footer>
+        <footer style="display:none;">
             <div class=" innerWrapper">
                 <div class="footerInner">
                     <div class="copy">

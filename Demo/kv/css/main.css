@@ -188,7 +188,7 @@ html, body {
 
 html {
   font-family: "新細明體", "PMingLiU", Arial, Verdana, Helvetica, sans-serif;
-  background: url(../images/fp_bg.jpg) no-repeat center center fixed;
+
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
@@ -197,6 +197,7 @@ html {
 }
 
 body {
+  background: url(../images/fp_bg.jpg) no-repeat center center fixed;
   width: 100%;
   overflow: hidden;
   color: rgba(237, 225, 197, 0.502);
@@ -329,7 +330,7 @@ body a:hover img {
 }
 
 #aboutus_locate {
-  /*display: none;*/
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
