@@ -50,10 +50,11 @@
                 $("#summary_text").hide();
                 
                 $('#aboutus_about').show();
-                
-                $("#summary_img").slideDown(1500);
                 $("#summary_heading").fadeIn(1500);
-                $("#summary_text").slideDown(1500);
+                $("#summary_img").fadeIn(1500,function(){
+                    
+                    $("#summary_text").slideDown(1500);
+                });
             });
             $("#business_philosophy").click(function(){
                 $('#aboutus_about').hide();
@@ -63,11 +64,12 @@
                 $("#business_philosophy_heading").hide();
                 $("#business_philosophy_text").hide();
                 
-                $("#aboutus_manage").fadeIn(1000);
-                
-                $("#business_philosophy_img").slideDown(1500);
+                $("#aboutus_manage").show();
                 $("#business_philosophy_heading").fadeIn(1500);
-                $("#business_philosophy_text").slideDown(1500);
+                $("#business_philosophy_img").fadeIn(1500,function(){
+                    
+                    $("#business_philosophy_text").slideDown(1500);
+                });
 
             });
             $("#map_location").click(function(){
@@ -78,13 +80,12 @@
                 $("#map_location_heading").hide();
                 $("#map_location_text").hide();
                 
-                $("#aboutus_locate").fadeIn(1200);
-                
-                $("#map_location_img").slideDown(1500);
+                $("#aboutus_locate").show();
                 $("#map_location_heading").fadeIn(1500);
-                $("#map_location_text").slideDown(1500);
-                
-
+                $("#map_location_img").fadeIn(1500,function(){
+                    
+                    $("#map_location_text").slideDown(1500);
+                });
             });
             $("#summary").click();
         });
@@ -118,9 +119,6 @@
 
 
             </div>
-
-
-
         </div>
 
         <div class="descbar2" >
@@ -225,17 +223,16 @@
                             <br>傳真號碼：02-27576313
                             <br>
 
+                                <a href="">
+                                    <img src="images/page2/nav.png" alt="">
+                                </a><br>
+
+                                <a href="">
+                                    <img src="images/page2/link.png" alt="">
+                                </a>
+
                         </p>
-                        <div>
-                            <a href="">
-                                <img src="images/page2/nav.png" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="">
-                                <img src="images/page2/link.png" alt="">
-                            </a>
-                        </div>
+                        
                     </div>
 
 

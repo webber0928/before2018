@@ -19,31 +19,22 @@
 <!--
     <script src='js/modernizr-2.0.6.min.js'></script>
 -->
-<!--
-    <script src='js/jquery-1.6.2.min.js'></script>
--->
     <script src='js/jquery-1.8.3.min.js'></script>
-<!--
-    <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
--->
     <script>
          $(function(){
-          //~ $('#button_test').click(function(){
-            //$("#test1").show(500);
-            //~ $("#test").fadeIn(8000);
-            $("#test1").fadeIn(7000);
-            $("#test2").fadeIn(7000);
-            $('footer').slideDown(2000);
-            $('#menubar').slideDown(2000);
+            $('footer').slideDown(1000,function(){
+                $('#menubar').fadeIn(1000,function(){
+                    $("logo_action").fadeIn(1000);
+                    $("#welcome_img1").animate({//以圖片作移動
+                      marginRight: "30px",
+                      opacity:'0.9',
+                    }, 3500,"swing",function(){
+                            $("#welcome_img2").fadeIn(1500);
+                        });
+                });
+            });
             
-            //~ $("#test2").animate({
-              //~ width: "35%",
-              //~ //opacity: 0.9, //透明度
-              //~ marginLeft: "0.5in",
-              //~ fontSize: "4em", 
-            //~ }, 5500);
             
-          //~ });
         });
     
     </script>
@@ -71,36 +62,33 @@
 
         <div class="descbar">
             <div class="innerWrapper">
-                <div class="title" id="test" style="">
-                    <p id="test1" style="display:none;width:190%;">歡迎您來到位於142公尺最具高度，最有視野的頂級商務會館。
-                    <span id="test2"style="display:none;font-size:4em;">Welcome</span>
-                    </p>
-                     
+                <div class="title" id="test" style=>
 <!--
-                    <img src="images/welcome.png" alt="">
+                    <p id="test1" style="display:none;">歡迎您來到位於142公尺最具高度，最有視野的頂級商務會館。</p>
+                    <p id="test2" style="margin-right:100px;display:inline;font-size:3.5em;">Welcome</p>
 -->
+                    <img src="images/welcome_2.png" id="welcome_img2" style="display:none;" alt=""> 
+                    <img src="images/welcome_1.png" id="welcome_img1" style="opacity:0.0;margin-right:80px;margin-bottom:10px;" alt="">
                 </div>
-<!--
-                <button id="button_test">test</button>
--->
             </div>
 
         </div>
         <div class="menu1bar">
             <div class=" innerWrapper" id="menubar" style="display:none;">
-                <div class="logo">
+                <div class="logo" id="logo_action">
                     <img src="images/logo.png" alt="">
                     <!-- <p>臺北世界貿易中心聯誼社</p> -->
 
                 </div>
                  <div class="menu1">
                     <ul>
-                        <li class="item1">
-
-                            <a href="page1.html" class="act">
-                                <!-- <img src="images/menu1/menu1_1.png" alt="關於我們"> -->
-                                <!-- <img src="images/indicate.png" alt="">
-                                <div class="first"></div> -->
+                        <li class="item1" >
+                            <a  href="page1.html" class="act">
+<!--
+                                 <img  src="images/menu1/menu1_1.png" alt="關於我們"> 
+                                 <img id="item1_action" src="images/indicate.png" alt="">
+                                <div class="first"></div> 
+-->
                             </a>
                             <div></div>
 
@@ -162,11 +150,12 @@
                     <div class="copy">
                         &copy; 2014 Taipei World Trade Center Club. All rights reserved
                     </div>
-                    <div class="info">
+                    <div class="info" >
                         <ul>
                             <li>
-                                <a href="">
-                                    <img src="images/icon1.png" alt="">ITB WEBSITE</a>
+                                <div><a>
+                                    <img  src="images/icon1.png" alt="">
+                                    ITB WEBSITE</a></div>
                             </li>
                             <li>
                                 <a href="">

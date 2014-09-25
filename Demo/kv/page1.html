@@ -17,7 +17,21 @@
     <link href='css/pageInit.css' rel='stylesheet'>
     <link href='css/main.css' rel='stylesheet'>
     <link href='css/page1.css' rel='stylesheet'>
+<!--
     <script src='js/modernizr-2.0.6.min.js'></script>
+-->
+    <script src='js/jquery-1.8.3.min.js'></script>
+    <script>
+        $(function(){
+            $("#aboutus_img1").animate({//以圖片作移動
+                  marginRight: "30px",
+                  opacity:'0.9',
+                }, 1200,"swing",function(){
+                     $("#aboutus_img2").fadeIn(2000);
+            });
+        });
+    
+    </script>
 </head>
 
 <body>
@@ -61,7 +75,8 @@
                         <br>會員人數超過一千人，萬商雲集，人文匯萃，是商務人士聚會商誼的上選。
                     </p>
                     <h1>About us</h1> -->
-                    <img src="images/page1/aboutus1.png" alt="">
+                    <img id="aboutus_img2"src="images/page1/about_2.png" style="display:none;margin-bottom:10px;"alt="">
+                    <img id="aboutus_img1"src="images/page1/about_1.png" style="opacity:0.1;margin-right:80px;margin-bottom:10px;" alt="">
                 </div>
             </div>
 
