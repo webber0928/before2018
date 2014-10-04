@@ -101,13 +101,28 @@
             });
             $("#summary").click();
         });
-
+        setTimeout(function(){$('.black').fadeOut(500)}, 1000);
     </script>
+    <style type="text/css">
+    .black {
+            display:    block;
+            position:   fixed;
+            z-index:    1000;
+            top:        0;
+            left:       0;
+            height:     100%;
+            width:      100%;
+            background: rgba( 0, 0, 0, 1 ) 
+                        url('http://i.stack.imgur.com/FhHRx.gif') 
+                        50% 50% 
+                        no-repeat;
+        }
+    </style>
 </head>
 
 <body class="noindex" id="page2_body">
     <div id='container' class="noindex">
-
+        <div class="black"></div>
         <div class="wrapper">
 
             <div class="ss-slides">
