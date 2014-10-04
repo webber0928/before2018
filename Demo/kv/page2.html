@@ -40,6 +40,12 @@
             $('.logo').css("cursor", "pointer").on('click',function(){
                 window.location.href = 'index.html';
             });
+            $('.close').click(function(){
+                $('#page2_body').fadeOut(3000,function(){
+                    window.location.href = 'page1.html';
+                    });
+               //~ $(window).location.href = 'page1.html';
+            });
 
             $("#summary").click(function(){
                 $('#aboutus_manage').hide();
@@ -49,12 +55,13 @@
                 $("#summary_heading").hide();
                 $("#summary_text").hide();
                 
-                $('#aboutus_about').show();
-                $("#summary_heading").fadeIn(1500);
-                $("#summary_img").fadeIn(1500,function(){
-                    
-                    $("#summary_text").slideDown(1500);
+                $('#aboutus_about').fadeIn(1500,function(){
+                    $("#summary_img").fadeIn(1500,function(){
+                        $("#summary_text").slideDown(1500);
+                    });
                 });
+                $("#summary_heading").fadeIn(3000);
+                
             });
             $("#business_philosophy").click(function(){
                 $('#aboutus_about').hide();
@@ -64,12 +71,14 @@
                 $("#business_philosophy_heading").hide();
                 $("#business_philosophy_text").hide();
                 
-                $("#aboutus_manage").show();
-                $("#business_philosophy_heading").fadeIn(1500);
-                $("#business_philosophy_img").fadeIn(1500,function(){
+                $("#aboutus_manage").fadeIn(1500,function(){
                     
-                    $("#business_philosophy_text").slideDown(1500);
+                    $("#business_philosophy_img").fadeIn(1500,function(){
+                        
+                        $("#business_philosophy_text").slideDown(1500);
+                    });
                 });
+                $("#business_philosophy_heading").fadeIn(3000);
 
             });
             $("#map_location").click(function(){
@@ -80,12 +89,15 @@
                 $("#map_location_heading").hide();
                 $("#map_location_text").hide();
                 
-                $("#aboutus_locate").show();
-                $("#map_location_heading").fadeIn(1500);
-                $("#map_location_img").fadeIn(1500,function(){
+                $("#aboutus_locate").fadeIn(1500,function(){
                     
-                    $("#map_location_text").slideDown(1500);
+                    $("#map_location_img").fadeIn(1500,function(){
+                        
+                        $("#map_location_text").slideDown(1500);
+                    });
                 });
+                $("#map_location_heading").fadeIn(3000);
+                    
             });
             $("#summary").click();
         });
@@ -93,8 +105,8 @@
     </script>
 </head>
 
-<body>
-    <div id='container'>
+<body class="noindex" id="page2_body">
+    <div id='container' class="noindex">
 
         <div class="wrapper">
 
@@ -136,7 +148,7 @@
                         <!-- <h4>經營理念</h4> -->
 
                         <div class="close">
-                            <a href="">
+                            <a>
                                 <img src="images/close.png" alt="">
                             </a>
                         </div>
@@ -173,7 +185,10 @@
                         <!-- <h4>經營理念</h4> -->
 
                         <div class="close">
-                            <a href="">
+<!--
+                            <a href="page1.html">
+-->
+                            <a>
                                 <img src="images/close.png" alt="">
                             </a>
                         </div>
@@ -208,7 +223,7 @@
                         <!-- <h4>經營理念</h4> -->
 
                         <div class="close">
-                            <a href="">
+                            <a href="page1.html">
                                 <img src="images/close.png" alt="">
                             </a>
                         </div>
@@ -284,7 +299,7 @@
                     <ul>
                         <li class="item1">
 
-                            <a href="" class="act">
+                            <a href="page1.html" class="act">
                                 <!-- <img src="images/menu1/menu1_1.png" alt="關於我們"> -->
                                 <!-- <img src="images/indicate.png" alt="">
                                 <div class="first"></div> -->

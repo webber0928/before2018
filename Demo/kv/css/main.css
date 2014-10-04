@@ -227,7 +227,12 @@ body a:hover img {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
+body.noindex{
+    background:none;
+}
+.page1_html{
+    background:none;
+}
 #container {
   position: relative;
   width: 100%;
@@ -335,7 +340,9 @@ body a:hover img {
 #logo_action{
   display: none;
 }
-
+#page1ID{
+    display: none;
+}
 
 
 /*# sourceMappingURL=main.css.map */

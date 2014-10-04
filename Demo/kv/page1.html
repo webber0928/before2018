@@ -23,6 +23,7 @@
     <script src='js/jquery-1.8.3.min.js'></script>
     <script>
         $(function(){
+            $("#page1_body").fadeIn(3000);
             $("#aboutus_img1").animate({//以圖片作移動
                   marginRight: "30px",
                   opacity:'0.9',
@@ -34,11 +35,9 @@
     </script>
 </head>
 
-<body>
+<body class="noindex" id="page1_body">
     <div id='container'>
-
         <div class="wrapper">
-
         <div class="ss-slides">
             <div class="ss-slide">
               <img src="images/bg1.jpg" />
