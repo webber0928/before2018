@@ -224,8 +224,8 @@ function ajaxCall( imgFile ){
     success: function(response) {
       imgList.push( imgFile );
       if(imgList.length > count)
-        $(".black").hide();
-        // setTimeout(function(){$(".black").hide();},500);
+        setTimeout(function(){$(".black").hide();},600);
+        // $(".black").hide();
       // alert("Success");
     },
     error: function (xhr, status) {
