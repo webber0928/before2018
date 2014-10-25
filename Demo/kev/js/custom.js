@@ -49,7 +49,7 @@ $(document).ready(function() {
             });
             }
         setTimeout(function(){//aboutus的開頭動畫
-            $('.black').fadeOut(500);
+            // $('.black').fadeOut(500);
             aboutusstart();
             //~ $('footer').slideDown(1000,function(){
                 //~ $('#menubar').fadeIn(1000,function(){
