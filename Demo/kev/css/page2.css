@@ -1,0 +1,113 @@
+@charset "UTF-8";
+body {
+  background: url(../images/bg2.jpg) no-repeat center center fixed;
+}
+
+#container .descbar {
+  bottom: 170px;
+}
+#container .menu2bar {
+  background-color: transparent;
+}
+#container .menu2bar .innerWrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#container .descbar2 {
+  width: 100%;
+  position: absolute;
+  bottom: 201px;
+}
+#container .descbar2 .innerWrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 1000px;
+  height: 420px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#container .descbar2 .innerWrapper .pic {
+  display: inline-block;
+  width: 333px;
+  height: 420px;
+  background: url(../images/pic_bg.png) repeat-y;
+}
+#container .descbar2 .innerWrapper .pic .picBox {
+  float: right;
+  margin-top: 75px;
+  background-color: rgba(237, 225, 197, 0.302);
+  width: 189px;
+  height: 280px;
+}
+#container .descbar2 .innerWrapper .pic .picBox img {
+  margin: 3px;
+}
+#container .descbar2 .innerWrapper .mainText {
+  float: right;
+  display: block;
+  width: 646px;
+  margin-top: 70px;
+  vertical-align: top;
+  color: #ede1c5;
+}
+#container .descbar2 .innerWrapper .mainText h3, #container .descbar2 .innerWrapper .mainText h4 {
+  margin: 0;
+  display: inline-block;
+}
+#container .descbar2 .innerWrapper .mainText .close {
+  float: right;
+  margin-right: 70px;
+  margin-top: 13px;
+}
+#container .descbar2 .innerWrapper .mainText hr {
+  margin: 0;
+  border-bottom: 1px;
+  margin: -7px 0 0 -23px;
+  opacity: .8;
+}
+#container .descbar2 .innerWrapper .mainText h3 {
+  font-size: 35px;
+  font-family: "Century";
+  font-weight: normal;
+  letter-spacing: -2px;
+}
+#container .descbar2 .innerWrapper .mainText h4 {
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "新細明體", "PMingLiU";
+}
+#container .descbar2 .innerWrapper .mainText p {
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 2px;
+}
+
+.mapLink a:link{
+	display:inline-block;	
+	width:144px;
+	height:26px;
+	background-image:url(../images/page2/nav.png);
+	background-repeat:no-repeat;
+}
+.mapLink a:hover{
+	width:144px;
+	height:26px;
+	background-image:url(../images/page2/nav02.png);
+	background-repeat:no-repeat;
+}
+.googleLink a:link{
+	display:inline-block;	
+	width:144px;
+	height:26px;
+	background-image:url(../images/page2/link.png);
+	background-repeat:no-repeat;
+}
+.googleLink a:hover{
+	width:144px;
+	height:26px;
+	background-image:url(../images/page2/link02.png);
+	background-repeat:no-repeat;
+}
+
+
+/*# sourceMappingURL=page2.css.map */
