@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>輔助工具</title>
+		<link href="//mincss.com/entireframework.min.css" rel="stylesheet" type="text/css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+		<style>
+			h1 {
+                margin: 0.2em 0;
+                border-bottom: 5px solid;
+                margin-bottom: 15px;
+                padding-bottom: 5px;
+			}
+            .hero {
+				padding: 20px;
+				border-radius: 10px;
+				margin-top: 1em;
+			}
+            .clearfix {
+                clear: both;
+            }
+            .center {
+                text-align: center;
+            }
+		</style>
+	</head>
+	<body>
+		<nav class="nav" tabindex="-1" onclick="this.focus()">
+			<div class="container">
+				<a class="pagename current" href="#">輔助工具</a>
+			</div>
+		</nav>
+		<button class="btn-close btn btn-sm">×</button>
+		<div class="container">
+            <div class="hero center">
+                <h1>輸入資料</h1>
+                <form class="col c6">
+                    <p><span class="addon">廣告標題</span><input name="title" type="text" class="smooth"></p>
+                    <p><span class="addon">圖片連結</span><input name="img" type="text" class="smooth"></p>
+                    <p><span class="addon">轉向網址</span><input name="url" type="text" class="smooth"></p>
+                    <button class="btn btn-b btn-sm" type="submit">送出</button>
+                </form>
+                <div class="col c6">
+                    <textarea id="result" class="smooth" rows="7" name="result"></textarea>
+                    <br>
+                    <button class="btn btn-a btn-sm" data-clipboard-action="copy" data-clipboard-target="#result">複製</button>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="hero center">
+                <h1>結果</h1>
+                <a id="url" target="_blank" href="#">
+                    <h3 id="title"></h3>
+                    <img id="img" src="" />
+                </a>
+            </div>
+		</div>
+        <script>
+            $(function(){
+                new Clipboard('.btn');
+
+                function getUrlVars() {
+                    var vars = {}, hash;
+                    var hashesPosition = window.location.href.indexOf('?') + 1;
+                    var hashes = window.location.href.slice(hashesPosition).split('&');
+
+                    if (!hashesPosition) {
+                        return;
+                    }
+                    for(var i = 0; i < hashes.length; i++) {
+                        hash = hashes[i].split('=');
+                        vars[hash[0]] = decodeURIComponent(hash[1]);
+                    }
+                    return vars;
+                }
+                var dataJson = getUrlVars();
+                $('textarea').text(JSON.stringify(dataJson));
+
+                $('#img').attr('src', dataJson.img);
+                $('#url').attr('href', dataJson.url);
+                $('#title').text(dataJson.title);
+
+                $('input[name="img"]').val(dataJson.img);
+                $('input[name="url"]').val(dataJson.url);
+                $('input[name="title"]').val(dataJson.title);
+            });
+        </script>
+	</body>
+</html>
